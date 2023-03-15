@@ -1,0 +1,57 @@
+
+
+
+.camera-module-wrapper {
+            height: 400px;
+                background-color: rgb(23, 23, 23);
+    display: flex;
+    align-items: center;
+justify-content: center;
+
+}
+.SmartHomeUI .camera-module {
+    width: 300px;
+}
+
+
+
+.camera-module img {
+    object-fit: contain;
+    user-select: none;
+
+}
+
+
+    .camera-effect {
+        position: relative;
+        overflow: hidden;
+    }
+    .camera-effect::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.08;
+        mix-blend-mode: screen;
+        animation-name: static-animation;
+        animation-duration: .25s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes static-animation {
+        0% { background-image: url("./images/static/static-1.png"); }
+        25% { background-image: url("./images/static/static-2.png"); }
+        50% { background-image: url("./images/static/static-3.png"); }
+        75% { background-image: url("./images/static/static-4.png"); }
+        100% { background-image: url("./images/static/static-1.png"); }
+    }
+
+    .SecurityModule .control {
+        display: flex;
+        justify-content: space-between;
+    }
+       .SecurityModule .control .icon {
+        font-size: 1.6rem;
+
+    }

@@ -1,0 +1,93 @@
+
+
+
+.SmartHomeUI {
+    min-width: 1000px;
+    min-height: 800px;
+background: #e0e0e0;
+    user-select: none;
+
+}
+.SmartHomeUI .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    
+}
+
+.SmartHomeUI .date-time {
+        display: flex;
+    align-items: center;
+    gap: .8em;
+}
+
+.SmartHomeUI .weather {
+    
+}
+.SmartHomeUI .module-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+    
+}
+
+.SmartHomeUI .module {
+    width: 200px;
+    aspect-ratio: 1;
+    /* background-color: gray; */
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+        gap: 1em;
+
+
+        border-radius: 50px;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
+
+.SmartHomeUI .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* align-items: center; */
+
+}
+
+
+.SmartHomeUI .icon {
+    font-size: 3rem;
+    color: rgb(203, 203, 203);
+}
+
+
+.module .name {
+    display: flex;
+    justify-content: center;
+}
+
+
+.module .main, .sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ClimateModule .power {
+    font-size: 2rem;
+    background-color: inherit;
+    border: none;
+    /* color: aqua; */
+}
+
+
+.charge-icon {
+    font-size: 1.6rem;
+}

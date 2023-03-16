@@ -3,3 +3,10 @@
 .ClimateModule {
     
 }
+
+.ClimateModule .power {
+    font-size: 2rem;
+    background-color: inherit;
+    border: none;
+    /* color: aqua; */
+}

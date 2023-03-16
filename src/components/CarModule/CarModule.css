@@ -3,3 +3,16 @@
 .CarModule {
     
 }
+
+.CarModule .charge-icon {
+    font-size: 1.6rem;
+}
+
+.CarModule .battery-display {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    gap: .4em;
+    padding: .2em .8em;
+    border-radius: 10px;
+}

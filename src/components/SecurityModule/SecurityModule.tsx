@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import "./SecurityModule.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icons } from "../../assets/images/icons";
+import { icons } from "../../assets/icons";
 
 function SecurityModule() {
   return (

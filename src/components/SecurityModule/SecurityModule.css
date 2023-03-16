@@ -1,5 +1,11 @@
-
-
 .SecurityModule {
-    
 }
+
+.SecurityModule .control {
+  display: flex;
+  justify-content: space-between;
+}
+.SecurityModule .control .icon {
+  font-size: 1.6rem;
+}
+

@@ -8,7 +8,9 @@ import MediaModule from "../MediaModule/MediaModule";
 import EnergyModule from "../EnergyModule/EnergyModule";
 import CarModule from "../CarModule/CarModule";
 import ClimateModule from "../ClimateModule/ClimateModule";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { icons } from "../../assets/icons";
+import LockScreen from "../LockScreen/LockScreen";
 function SmartHomeUI() {
   const [time, setTime] = useState(new Date());
 
@@ -19,8 +21,24 @@ function SmartHomeUI() {
       return () => clearInterval(interval);
     }, []);
 
+
+      const overlayRef: any = useRef(null);
+
+      const activateOverlay = () => {
+        console.log("test");
+
+        console.log(overlayRef);
+
+        if (overlayRef.current) {
+          overlayRef.current.toggleOverlay();
+        }
+      };
+
+      
   return (
     <div className="SmartHomeUI">
+      <LockScreen ref={overlayRef} />
+
       <div className="header">
         <div className="date-time">
           <p className="date">
@@ -44,7 +62,7 @@ function SmartHomeUI() {
       </div>
 
       <div className="module-grid">
-        <div className="left">
+        <div className="left column">
           <div className="module">
             <ClimateModule />
           </div>
@@ -62,7 +80,7 @@ function SmartHomeUI() {
           <CameraModule />
         </div>
 
-        <div className="left">
+        <div className="right column">
           <div className="module">
             <SecurityModule />
           </div>
@@ -75,6 +93,12 @@ function SmartHomeUI() {
           </div>
         </div>
       </div>
+
+      <button className="btn-lock" onClick={activateOverlay}>
+        <FontAwesomeIcon icon={icons.faLock} className="icon" />
+      </button>
+
+      {/* <div className="lock-screen"></div> */}
     </div>
   );
 }

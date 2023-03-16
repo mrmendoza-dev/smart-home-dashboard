@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import "./ClimateModule.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icons } from "../../assets/images/icons";
+import { icons } from "../../assets/icons";
 
 function ClimateModule() {
   return (
@@ -13,11 +13,11 @@ function ClimateModule() {
       </div>
       <div className="control">
         <div className="main">
-          <button>Minus</button>
+          {/* <button>Minus</button> */}
           <button className="power">
             <FontAwesomeIcon icon={icons.faPowerOff} />
           </button>
-          <button>Minus</button>
+          {/* <button>Minus</button> */}
         </div>
         <div className="sub">
           <input type="range" min="0" max="100" value="50" step="1" />

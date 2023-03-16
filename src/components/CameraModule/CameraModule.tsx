@@ -7,7 +7,7 @@ import loungeImg from "./images/rooms/lounge.png";
 import poolImg from "./images/rooms/pool.png";
 import officeImg from "./images/rooms/office.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icons } from "../../assets/images/icons";
+import { icons } from "../../assets/icons";
 
 
 function SecurityModule() {
@@ -42,7 +42,7 @@ function SecurityModule() {
   const roomButtons = rooms.map((room, index) => (
     <button
       key={index}
-      className={`${currentRoomIndex === index ? "active" : ""}`}
+      className={`btn-room ${currentRoomIndex === index ? "active" : ""}`}
       onClick={() => handleRoomChange(index)}
     >
       {index + 1}
@@ -50,21 +50,40 @@ function SecurityModule() {
   ));
 
   return (
-    <div className="SecurityModule">
+    <div className="CameraModule">
       <p className="">{currentRoom.name}</p>
       <div className="camera-module-wrapper">
         <div className="camera-module camera-effect">
           <img className="footage" src={currentRoom.image} />
+          <div className="camera-overlay">
+            <div className="recording">
+              <div className="led"></div>
+              <p>REC</p>
+            </div>
+
+            <p className="room">CAM {currentRoomIndex + 1}</p>
+            <div className="bottom-text">
+              <p>ISO 800</p>
+              <p>F 2.4</p>
+              <p>HD1080P</p>
+              <p>AWB</p>
+            </div>
+            
+            <div className="corner-overlay top-left"></div>
+            <div className="corner-overlay top-right"></div>
+            <div className="corner-overlay bottom-left"></div>
+            <div className="corner-overlay bottom-right"></div>
+          </div>
         </div>
       </div>
 
       <div className="control">
-        <button onClick={handlePreviousRoom}>
+        <button onClick={handlePreviousRoom} className="btn-next">
           <FontAwesomeIcon icon={icons.faAngleLeft} className="icon" />
         </button>
         {roomButtons}
-        <button onClick={handleNextRoom}>
-          <FontAwesomeIcon icon={icons.faAngleRight} className="icon" />
+        <button onClick={handleNextRoom} className="btn-next">
+          <FontAwesomeIcon icon={icons.faAngleRight} />
         </button>
       </div>
     </div>

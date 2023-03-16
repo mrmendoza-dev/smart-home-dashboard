@@ -3,7 +3,7 @@ import "./MediaModule.css";
 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icons } from "../../assets/images/icons";
+import { icons } from "../../assets/icons";
 
 function MediaModule() {
   return (

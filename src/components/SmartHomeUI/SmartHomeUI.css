@@ -1,93 +1,111 @@
-
-
-
 .SmartHomeUI {
-    min-width: 1000px;
-    min-height: 800px;
-background: #e0e0e0;
-    user-select: none;
-
+  min-width: 1000px;
+  min-height: 800px;
+  background: #e0e0e0;
+  user-select: none;
+    position: relative;
+font-size: 16px;
 }
 .SmartHomeUI .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1em;
-    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .6em 1em;
+    background-color: black;
+  z-index: 100;
+  font-size: 1.1rem;
 }
 
+
 .SmartHomeUI .date-time {
-        display: flex;
-    align-items: center;
-    gap: .8em;
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
 }
 
 .SmartHomeUI .weather {
-    
 }
 .SmartHomeUI .module-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1em;
-    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1em;
+  margin-top: 1em;
 }
 
 .SmartHomeUI .module {
-    width: 200px;
-    aspect-ratio: 1;
-    /* background-color: gray; */
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: column;
-        gap: 1em;
+  width: 200px;
+  aspect-ratio: 1;
+  /* background-color: gray; */
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 30px #c8c8c8, -10px -10px 30px #f5f5f5;
+    z-index: 0;
 
-        border-radius: 50px;
-background: #e0e0e0;
-box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
 }
-
 
 .SmartHomeUI .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    /* align-items: center; */
-
+  /* align-items: center; */
 }
 
-
-.SmartHomeUI .icon {
-    font-size: 3rem;
-    color: rgb(203, 203, 203);
+.SmartHomeUI .module .icon {
+  font-size: 3rem;
+  color: rgb(203, 203, 203);
 }
-
 
 .module .name {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.module .main,
+.sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.module-grid {
+  display: flex;
+}
+
+.module-grid .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6em;
 }
 
 
-.module .main, .sub {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
-.ClimateModule .power {
+.SmartHomeUI .btn-lock {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: .6em;
     font-size: 2rem;
-    background-color: inherit;
+    background: inherit;
     border: none;
-    /* color: aqua; */
 }
 
-
-.charge-icon {
-    font-size: 1.6rem;
-}
+/* .SmartHomeUI .lock-screen {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgb(93, 93, 93);
+        z-index: 1000;
+} */

@@ -64,19 +64,23 @@ function WeatherModule() {
 
   return (
     <div className="WeatherModule">
-      <a
-        href={`https://www.google.com/maps/@${coordinates.lat},${coordinates.lon}`}
-        target="_blank"
-      >
-        <p className="weather-location">{currentWeatherData.name}</p>
-      </a>
-      <p className="weather-temp">
-        {currentWeatherData.main.temp.toFixed(0)}&deg;
-      </p>
-      <p className="weather-status">{currentWeatherData.weather[0].main}</p>
-      <div className="flex weather-temp-range">
+      <div className="header">
+        <a
+          href={`https://www.google.com/maps/@${coordinates.lat},${coordinates.lon}`}
+          target="_blank"
+        >
+          <p className="weather-location">{currentWeatherData.name}</p>
+        </a>
+
+        <p className="weather-temp">
+          {currentWeatherData.main.temp.toFixed(0)}&deg;
+        </p>
+
+        <p className="weather-status">{currentWeatherData.weather[0].main}</p>
+        {/* <div className="flex weather-temp-range">
         <p className="">L:{currentWeatherData.main.temp_min.toFixed(0)}&deg;</p>
         <p className="">H:{currentWeatherData.main.temp_max.toFixed(0)}&deg;</p>
+      </div> */}
       </div>
     </div>
   );

@@ -7,10 +7,11 @@ import { icons } from "../../assets/icons";
 function EnergyModule() {
   return (
     <div className="EnergyModule">
-      <p className="name">Energy Usage</p>
-      <div className="content">
+      <p className="name mb-2">Energy Usage</p>
+      <div className="content mb-2">
         <FontAwesomeIcon icon={icons.faBolt} className="icon" />
       </div>
+
       <div className="main">
         {/* <button>Previous</button>
               <button>Play</button>
@@ -18,8 +19,10 @@ function EnergyModule() {
       </div>
       <div className="sub">
         {/* <input type="range" min="0" max="100" value="50" step="1" /> */}
+        <p className="">Error Connecting</p>
       </div>
     </div>
+
   );
 }
 

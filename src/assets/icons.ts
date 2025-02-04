@@ -10,6 +10,7 @@ import {
   faPowerOff,
   faClock,
   faPhoneVolume, faXmark,
+  faPlay,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faAngleDown,
@@ -62,6 +63,7 @@ export const icons = {
   faClock,
   faPhoneVolume,
   faXmark,
+  faPlay,
 
   faBatteryEmpty,
   faBatteryQuarter,

@@ -42,16 +42,19 @@ function SecurityModule() {
   const roomButtons = rooms.map((room, index) => (
     <button
       key={index}
-      className={`btn-room ${currentRoomIndex === index ? "active" : ""}`}
+      className={`bg-gray-400 rounded-md w-10 h-10 hover:bg-gray-500 ${
+        currentRoomIndex === index ? "bg-gray-500" : ""
+      }`}
       onClick={() => handleRoomChange(index)}
     >
+
       {index + 1}
     </button>
   ));
 
   return (
     <div className="CameraModule">
-      <p className="">{currentRoom.name}</p>
+      <p className="text-base">{currentRoom.name}</p>
       <div className="camera-module-wrapper">
         <div className="camera-module camera-effect">
           <img className="footage" src={currentRoom.image} />
@@ -77,12 +80,17 @@ function SecurityModule() {
         </div>
       </div>
 
-      <div className="control">
-        <button onClick={handlePreviousRoom} className="btn-next">
+      <div className="flex justify-center items-center mt-4">
+        <button onClick={handlePreviousRoom} className="bg-gray-400 rounded-md w-10 h-10 hover:bg-gray-500">
           <FontAwesomeIcon icon={icons.faAngleLeft} className="icon" />
         </button>
+
+
+
+
         {roomButtons}
-        <button onClick={handleNextRoom} className="btn-next">
+        <button onClick={handleNextRoom} className="bg-gray-400 rounded-md w-10 h-10 hover:bg-gray-500">
+
           <FontAwesomeIcon icon={icons.faAngleRight} />
         </button>
       </div>

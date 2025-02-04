@@ -68,11 +68,13 @@ function formatTime(seconds: any) {
 
   return (
     <div className="CarModule">
-      <p className="name">Car</p>
-      <div className="content">
+      <p className="name mb-2">Car</p>
+      <div className="content mb-2">
         <FontAwesomeIcon icon={icons.faCar} className="icon" />
       </div>
-      <div className="main">
+      <div className="main flex items-center justify-center gap-2">
+
+
         <FontAwesomeIcon icon={icons.faBolt} className="charge-icon" />
         <div className="battery-display">
           <FontAwesomeIcon
@@ -85,10 +87,15 @@ function formatTime(seconds: any) {
           </p>
         </div>
       </div>
-      <div className="sub">
+      <div className="sub flex flex-col items-center mt-4">
         {/* <input type="range" min="0" max="100" value={batteryLevel} step="1" onChange={(e) => setBatteryLevel(e.target.value)} /> */}
-      <p className="">Estimated charge time: {formatTime(estimatedTimeToFinish)}</p>
+      <p className="text-sm">Estimated charge time:</p>
+        
+
+        <p className="text-sm"> {formatTime(estimatedTimeToFinish)}</p>
       
+
+
       </div>
     </div>
   );
